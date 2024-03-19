@@ -1,0 +1,87 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>CLick</title>
+        </head>
+        <body>
+
+            <h1>Welcome to jQuery</h1>
+            <h3>This is awesome js Library</h3>
+
+            <button type="button" id="clickme">Click Me</button>
+            <button type="button" id="dblclick">Double Click Me</button>
+
+            <button type="button" id="singleclk">single click</button>
+            <button type="submit" id="doubleclk">double click</button>
+
+            <button type="button" id="onclk">Single click Me</button>
+            <button type="button" id="ondbclk">Double click Me </button>
+
+
+            <script src= "https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+            <script type="text/javascript">
+                // $(document).ready(function(){
+                //     console.log("hi")
+                // })
+
+                // $(window.document).ready(function(){
+                //     console.log("hay i am working");
+                // });
+
+                // jQuery(window.document).ready(function(){
+                //     console.log("pray myanmar");
+                // });
+
+                $(document).ready(function(){
+
+                    // document.getElementById();
+                    // document.getElementsByClassName(); //HTML Collection
+                    // document.getElementsByTagName();
+
+                    // document.querySelector("#");  //Node list
+                    // document.querySelector("."); //Node List
+                    // document.querySelector(""); //Node List
+
+                    // $("#");
+                    // $(".");
+                    // $("");
+
+                    // document.getElementById("clickme").addEventListener("cilck",function(){
+                    //     console.log('hi');
+                    // });
+
+                    $("#clickme").click(function(){
+                        console.log("hello sir");
+                    });
+
+                    $("#dblclick").dblclick(function(){
+                        console.log("helllo sir i am working");
+                    });
+
+                    $("#singleclk").bind("click",function(){
+                        console.log("i am single click from bind method");
+                    });
+
+                    $("#doubleclk").bind("dblclick",function(){
+                        console.log("i am double click by bind method");
+
+                        console.log("i am double click by bind method = "+ this.type); //result = submit (type attrubute value)
+                        console.log("i am double click by bind method = "+ this.nodeName); //result = button ( it mean tag name)
+                    })
+
+                    $("#onclk").on("click",function(){
+                        console.log("i am single click by on method");
+                    });
+
+                    $("#ondbclk").on("dblclick",function(){
+                        console.log("i am double click by on method");
+                    })
+
+
+                });
+
+
+            </script>
+        </body>
+    </html>
